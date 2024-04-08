@@ -44,11 +44,11 @@ if ingredients_list:
 
 
 
-         # Only create one button for submitting order
-        if st.button('Submit Order!' + name_on_order):
+          # Provide a unique key for each button
+        button_key = fruit_chosen.replace(" ", "_")  # Replace spaces with underscores to ensure key validity
+        if st.button('Submit Order!' + name_on_order, key=button_key):
             session.sql(my_insert_stmt).collect()
             st.success('Your Smoothie is ordered,' + name_on_order + " !", icon="✅")
-           
     
     
         
