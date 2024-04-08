@@ -6,7 +6,6 @@ import requests
 import pandas
 
 
-
 # Write directly to the app
 st.title("Customize Your Smoothie! :balloon:")
 st.write(
